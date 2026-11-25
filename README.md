@@ -22,5 +22,6 @@
 - [Bohr｜矽谷工程師的職涯與人生故事（未發布）](examples/bohr/README.md)
 - [夏木 KRIS｜把舊文章重新組裝成新的爆文](examples/viregeek/README.md)
 - [潘奕兆｜從設計教學走到 AI 一人公司](examples/pan-0709/README.md)
+- [Vincent｜一個讓我願意讀完長文的創作者](examples/vincentyucw/README.md)
 
 案例保留研究觀察、公開證據及文章狀態；不代表已驗證方法成效。
