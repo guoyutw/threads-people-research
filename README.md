@@ -20,5 +20,6 @@
 - [CabLate｜先想清楚每次委派要換回什麼](examples/cablate/README.md)
 - [黑貓老師｜先回答別人的問題，再發現可以提供的服務](examples/black-cat-teacher/README.md)
 - [Bohr｜矽谷工程師的職涯與人生故事（未發布）](examples/bohr/README.md)
+- [夏木 KRIS｜把舊文章重新組裝成新的爆文](examples/viregeek/README.md)
 
 案例保留研究觀察、公開證據及文章狀態；不代表已驗證方法成效。
