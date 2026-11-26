@@ -25,4 +25,8 @@
 - [Vincent｜一個讓我願意讀完長文的創作者](examples/vincentyucw/README.md)
 - [世豐老師｜三軍策略與經營 Threads 的目的](examples/richsong112/README.md)
 
+- [炭治郎醫生｜歷史研究的保存](examples/tanjiro-doctor/README.md)
+- [安迪｜知識型海巡回覆](examples/andyoo66/README.md)
+- [Leon Lu｜人生經歷與創業試錯](examples/leon-lu/README.md)
+
 案例保留研究觀察、公開證據及文章狀態；不代表已驗證方法成效。
