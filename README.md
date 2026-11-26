@@ -23,5 +23,6 @@
 - [夏木 KRIS｜把舊文章重新組裝成新的爆文](examples/viregeek/README.md)
 - [潘奕兆｜從設計教學走到 AI 一人公司](examples/pan-0709/README.md)
 - [Vincent｜一個讓我願意讀完長文的創作者](examples/vincentyucw/README.md)
+- [世豐老師｜三軍策略與經營 Threads 的目的](examples/richsong112/README.md)
 
 案例保留研究觀察、公開證據及文章狀態；不代表已驗證方法成效。
