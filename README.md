@@ -33,4 +33,4 @@
 
 ## 人物誌公開網站｜維護接續
 
-網站是獨立的作品典藏交付，不是進行人物研究的必要前提。維護或新增人物頁前，先讀[既有瀏覽計數規格](website/releases/2026-11-27-views/README.md)與[共用品牌設計基線](website/releases/2026-11-27-brand/README.md)。封存是已驗證版本的歷史紀錄；實際改版前仍須核對正式 runtime，保留既有計數及文章，發布由 Owner 決定。
+網站是獨立的作品典藏交付，不是進行人物研究的必要前提。維護或新增人物頁前，先讀[目前正式站增量封存（炭治郎脈絡修訂）](website/releases/2026-11-28-tanjiro-context/README.md)，再參考[瀏覽計數規格](website/releases/2026-11-27-views/README.md)與[共用品牌設計基線](website/releases/2026-11-27-brand/README.md)。封存是已驗證版本的歷史紀錄；實際改版前仍須核對正式 runtime，保留既有計數及文章，發布由 Owner 決定。
