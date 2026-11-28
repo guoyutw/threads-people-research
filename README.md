@@ -33,4 +33,13 @@
 
 ## 人物誌公開網站｜維護接續
 
-網站是獨立的作品典藏交付，不是進行人物研究的必要前提。維護或新增人物頁前，先讀[目前正式站增量封存（炭治郎脈絡修訂）](website/releases/2026-11-28-tanjiro-context/README.md)，再參考[瀏覽計數規格](website/releases/2026-11-27-views/README.md)與[共用品牌設計基線](website/releases/2026-11-27-brand/README.md)。封存是已驗證版本的歷史紀錄；實際改版前仍須核對正式 runtime，保留既有計數及文章，發布由 Owner 決定。
+網站是獨立的作品典藏交付，不是進行人物研究的必要前提。維護或新增人物頁前，先核對正式 runtime 與以下架構遷移基線；發布由 Owner 決定。
+
+### Static Assets 架構遷移基線（2026-11-28）
+
+- 正式域名與既有文章不變。Cloudflare Worker `people-and-ideas-public` 於 2026-11-28 遷移至 asset-first Static Assets（`run_worker_first: false`）；HTML、字型、favicon、OG、robots、sitemap 由靜態層供應，既有計數 API 使用 Worker 與原 D1 `PAGE_VIEWS`，撤下路由仍採 fail-closed。不得以舊版內嵌資產 Worker 作為新部署基線或直接回滾。
+- 遷移查核時 deployment `3769127d-4781-473c-946b-eedbadf57644`、version `0395e013-e77a-4740-9aef-b2f8ebea7c62` 100%；原網域與 D1 綁定保留，workers.dev / preview URLs 關閉。這是歷史驗收收據，不是持續有效的 runtime 狀態。
+- 實際驗收：39 個 manifest 路徑，36 項直接檢驗的非 HTML 靜態資源逐位元一致；正式 HTML SHA-256 `a8cd82d3df0f97583d0e4f1d0b0cb6fc7b863546677bfc86445ede30593553bb`。當 Worker 額度仍耗盡（HTTP 429）時，正式頁及根網址、舊別名跟隨轉址均為 200；計數及撤下路由仍為 429。候選版撤下說明 410 已通過本機測試；正式 410 與計數恢復待額度重置後確認，不重設資料庫。
+- 維護來源：Owner 私有工作區 `static-assets-migration-20261128` 的 `DEPLOYMENT-RECEIPT.md`、`wrangler.json`、`worker.mjs`、`public/`、`asset-manifest.json`、`live-verification.json`。以核對 runtime 後的候選版接續；不得整包公開私有工作區、資源識別碼、撤下路由識別資訊或部署憑證。公開封存不是部署授權。
+- 此前的故障是所有路由消耗 Worker 額度，觀察到 Cloudflare 1027/429；確切流量組成與早期架構選擇原因未知。新增資產、計費依賴或變更託管架構時，使用 [Home 共用架構檢查](https://github.com/guoyutw/lulumi-home/blob/main/skills/deploy-architecture-check/SKILL.md)：核心功能隔離、資源/規模、權宜方案與退場。純內容或樣式小修不新增流程；不新增付費方案或重新部署，只為驗證。
+- 歷史參考（不可當成現行部署來源）：[炭治郎脈絡修訂](website/releases/2026-11-28-tanjiro-context/README.md)、[瀏覽計數規格](website/releases/2026-11-27-views/README.md)、[共用品牌設計基線](website/releases/2026-11-27-brand/README.md)。新增頁面仍須保留既有計數及文章，遵守撤回原則。
